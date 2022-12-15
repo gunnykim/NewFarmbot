@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/basic.css')}}">
+</head>
+<body>
+    <div id="webgl-container"></div>
+    <script type="importmap">
+        <!-- {
+            "imports": {
+                "three": "{{ url_for('static', filename = 'node_modules/three/build/three.module.js')}}",
+                "three/examples/jsm/controls/OrbitControls":"{{ url_for('static', filename = 'node_modules/three/examples/jsm/controls/OrbitControls.js')}}",
+                "three/examples/jsm/loaders/GLTFLoader":"{{ url_for('static', filename = 'node_modules/three/examples/jsm/loaders/GLTFLoader.js')}}",
+                "three/examples/jsm/libs/stats":"{{ url_for('static', filename = 'node_modules/three/examples/jsm/libs/stats.module.js)}}"
+            }
+        } -->
+        {
+            "imports": {
+                "three": "../node_modules/three/build/three.module.js",
+                "three/examples/jsm/controls/OrbitControls":"../node_modules/three/examples/jsm/controls/OrbitControls.js",
+                "three/examples/jsm/loaders/GLTFLoader":"../node_modules/three/examples/jsm/loaders/GLTFLoader.js",
+                "three/examples/jsm/libs/stats":"../node_modules/three/examples/jsm/libs/stats.module.js"
+            }
+        }
+    </script>
+    <script src="{{ url_for('static', filename='js/basic.js')}}"></script>
+</body>
+</html>
